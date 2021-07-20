@@ -12,13 +12,15 @@ source:
 
 build:
   number: 0
-  skip: true  # [not linux]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
+    - patch       # [unix]
+    - m2-patch    # [win]
     - cmake
-    - make
+    - make        # [unix]
+    - ninja       # [win]
   host:
     - llvmdev  {{ llvm_version }}
     - llvm  {{ llvm_version }}
