@@ -12,6 +12,8 @@ source:
 
 build:
   number: 0
+  # we do not yet provide llvm on linux-s390x
+  skip: true    # [s390x]
 
 requirements:
   build:
