@@ -1,7 +1,7 @@
 #!/bin/bash
 
 EXTRA_CMAKE_ARGS=""
-if [[ "$target_platform" == "osx-64" ]]; then
+if [[ "$target_platform" == osx-* ]]; then
   EXTRA_CMAKE_ARGS="${EXTRA_CMAKE_ARGS} -DCMAKE_MACOSX_RPATH=ON -DCMAKE_BUILD_WITH_INSTALL_RPATH=ON"
 fi
 
